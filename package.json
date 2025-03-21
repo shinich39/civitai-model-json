@@ -1,0 +1,33 @@
+{
+  "name": "civitai-model-json",
+  "version": "1.0.0",
+  "description": ".",
+  "type": "module",
+  "scripts": {
+    "test": "tsx --test \"**/*.test.{js,jsx,ts,tsx}\"",
+    "update:init": "tsx scripts/init.ts",
+    "update:new": "tsx scripts/update.ts",
+    "build": "tsx scripts/build.ts"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "shinich39 <shinich39@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.5",
+    "esbuild": "^0.24.2",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^10.0.1",
+    "node-html-observer": "github:shinich39/node-html-observer",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.12.1"
+  }
+}
