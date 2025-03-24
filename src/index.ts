@@ -130,7 +130,7 @@ export async function collectMany(
             if (skipCollectedVersion) {
               const prevImages = await Image.find({ modelId: c.id, versionId: v.id });
               if (prevImages.length > 0) {
-                console.log(`[${ckptCount}] Already images collected: ${c.name}/${v.name}`);
+                // console.log(`[${ckptCount}] Already images collected: ${c.name}/${v.name}`);
                 continue;
               }
             }

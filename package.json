@@ -7,6 +7,7 @@
     "test": "tsx --test \"**/*.test.{js,jsx,ts,tsx}\"",
     "update:init": "tsx scripts/init.ts",
     "update:new": "tsx scripts/update.ts",
+    "update:build": "npm run update:new && npm run build",
     "build": "tsx scripts/build.ts"
   },
   "keywords": [

@@ -47,7 +47,7 @@ const ckpt: {
   workflows: string[],
 }[] = [];
 
-let errorCount = 0;
+let errorMessages: string[] = [];
 
 const checkpoints = await checkpoint.find({});
 for (let i = 0; i < checkpoints.length; i++) {
@@ -64,7 +64,7 @@ for (let i = 0; i < checkpoints.length; i++) {
     latest.versionCount++;
 
     if (fileNames.length === 0 && hashes.length === 0) {
-      errorCount += 1;
+      errorMessages.push(`No files and No hashes: ${c.name}/${v.name}`);
       continue;
     }
 
@@ -180,8 +180,13 @@ console.log(`Result:`);
 console.log(`  Model Count: ${latest.modelCount}`);
 console.log(`  Version Count: ${latest.versionCount}`);
 console.log(`  Item Count: ${latest.itemCount}`);
-console.log(`  Error Count: ${errorCount}`);
+console.log(`  Error Count: ${errorMessages.length}`);
 console.log(``);
+// console.log(`Error:`);
+// for (const msg of errorMessages) {
+//   console.log(`  ${msg}`);
+// }
+
 // console.log(ckpt.find((item) => item.metas.length > 1));
 // console.log(ckpt.find((item) => item.workflows.length > 1));
 
