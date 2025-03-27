@@ -28,6 +28,9 @@ const METADATA_KEYS = {
   "cfg": ["cfgScale", "cfg", "Guidance", "guidance",],
 }
 
+const MAX_META_COUNT = 3;
+const MAX_WORKFLOW_COUNT = 3;
+
 const latest = {
   modelCount: 0,
   versionCount: 0,
@@ -167,8 +170,8 @@ for (let i = 0; i < checkpoints.length; i++) {
       hashes: hashes.filter((item) => typeof item === "string"),
       metas: metas.filter((item) => typeof item === "object")
         .sort((a, b) => Object.keys(b).length - Object.keys(a).length)
-        .slice(0, 3),
-      workflows: workflows.slice(0, 3),
+        .slice(0, MAX_META_COUNT),
+      workflows: workflows.slice(0, MAX_WORKFLOW_COUNT),
     });
   }
 }

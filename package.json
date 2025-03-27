@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "test": "tsx --test \"**/*.test.{js,jsx,ts,tsx}\"",
+    "pub": "npm run update:new && npm run build && npm run commit",
     "update:init": "tsx scripts/init.ts",
     "update:new": "tsx scripts/update.ts",
-    "update:build": "npm run update:new && npm run build",
+    "commit": "tsx scripts/commit.ts",
     "build": "tsx scripts/build.ts"
   },
   "keywords": [
