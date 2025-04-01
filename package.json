@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "tsx --test \"**/*.test.{js,jsx,ts,tsx}\"",
-    "pub": "npm run update:new && npm run build && npm run commit",
+    "update:pub": "npm run update:new && npm run build && npm run commit",
     "update:init": "tsx scripts/init.ts",
     "update:new": "tsx scripts/update.ts",
     "commit": "tsx scripts/commit.ts",
