@@ -1,0 +1,54 @@
+{
+  "name": "create-ts-cli",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [
+    "typescript",
+    "sqlite"
+  ],
+  "license": "MIT",
+  "author": "shinich39 <shinich39@gmail.com>",
+  "type": "module",
+  "main": "./dist/app.js",
+  "exports": "./dist/app.js",
+  "scripts": {
+    "test": "tsx --test \"**/*.test.{js,jsx,ts,tsx}\"",
+    "dev": "nodemon --config nodemon.config.json",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "check": "biome check . --write",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "tsx src/db/seed.ts",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "axios": "^1.13.5",
+    "axios-cookiejar-support": "^6.0.5",
+    "better-sqlite3": "^12.6.2",
+    "dayjs": "^1.11.19",
+    "dotenv": "^17.3.1",
+    "drizzle-orm": "^0.45.1",
+    "ink": "^6.8.0",
+    "ink-select-input": "^6.2.0",
+    "ink-spinner": "^5.0.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^19.2.4",
+    "tough-cookie": "^6.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.6",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.3.0",
+    "@types/react": "^19.2.14",
+    "drizzle-kit": "^0.31.10",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "nodemon": "^3.1.11",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}

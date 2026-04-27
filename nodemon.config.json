@@ -1,0 +1,10 @@
+{
+  "watch": ["src"],
+  "ext": "ts,tsx",
+  "ignore": ["node_modules", "dist", "test", "**/*.spec.ts", "**/*.test.ts"],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "exec": "tsx src/app.tsx",
+  "stdin": false
+}
