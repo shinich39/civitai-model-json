@@ -17,7 +17,7 @@
     "dev": "nodemon --config nodemon.config.json",
     "build": "tsc",
     "start": "node dist/app.js",
-    "check": "biome check . --write",
+    "check": "biome check --write .",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
